@@ -51,6 +51,11 @@ custom_error -> CustomError is the package to handle custom errors.
 └── video_provider -> VideoProvider is the package to interact with the video provider present on streaming platforms.
 ```
 
+## Roadmap
+
+- [ ] Add autoupdate
+- [ ] Add download feature
+
 ## License
 
 By contributing, you agree that your contributions will be licensed under its GNU AFFERO GENERAL PUBLIC LICENSE Version 3.
