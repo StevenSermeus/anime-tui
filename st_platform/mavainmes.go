@@ -8,10 +8,12 @@ import (
 	"regexp"
 	"sort"
 	"strings"
+	"time"
 
 	"github.com/PuerkitoBio/goquery"
 	customerror "github.com/StevenSermeus/anime-tui/custom_error"
 	videoprovider "github.com/StevenSermeus/anime-tui/video_provider"
+	"github.com/briandowns/spinner"
 )
 
 type Mavanimes struct {
@@ -20,6 +22,9 @@ type Mavanimes struct {
 }
 
 func (m *Mavanimes) GetAnimeList() ([]Anime, error) {
+	spinner := spinner.New(spinner.CharSets[30], 100*time.Millisecond)
+	spinner.Start()
+	defer spinner.Stop()
 	response, err := http.Get("https://mavanimes.cc/tous-les-animes-en-vostfr")
 	if err != nil {
 		return nil, err
@@ -63,6 +68,9 @@ func (m *Mavanimes) GetAnimeList() ([]Anime, error) {
 }
 
 func (m *Mavanimes) GetRecentEpisode() ([]Episode, error) {
+	spinner := spinner.New(spinner.CharSets[30], 100*time.Millisecond)
+	spinner.Start()
+	defer spinner.Stop()
 	res, err := http.Get("https://www.mavanimes.cc/")
 
 	if err != nil {
@@ -106,6 +114,9 @@ func (m *Mavanimes) GetRecentEpisode() ([]Episode, error) {
 }
 
 func (m *Mavanimes) GetEpisodeList(url string) ([]Episode, error) {
+	spinner := spinner.New(spinner.CharSets[30], 100*time.Millisecond)
+	spinner.Start()
+	defer spinner.Stop()
 	response, err := http.Get(url)
 	if err != nil {
 		return nil, err
@@ -132,6 +143,9 @@ func (m *Mavanimes) GetEpisodeList(url string) ([]Episode, error) {
 }
 
 func (m *Mavanimes) GetVideoURL(url string) ([]videoprovider.VideoProvider, error) {
+	spinner := spinner.New(spinner.CharSets[30], 100*time.Millisecond)
+	spinner.Start()
+	defer spinner.Stop()
 	res, err := m.httpPostWithCookies(url)
 	if err != nil {
 		return nil, err

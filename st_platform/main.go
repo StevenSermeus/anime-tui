@@ -18,5 +18,5 @@ type StreamingPlatform interface {
 	GetAnimeList() ([]Anime, error)
 	GetRecentEpisode() ([]Episode, error)
 	GetEpisodeList(string) ([]Episode, error)
-	GetVideoURL(string) (videoprovider.VideoProvider, error)
+	GetVideoURL(string) ([]videoprovider.VideoProvider, error)
 }

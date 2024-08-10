@@ -9,6 +9,7 @@ import (
 	"time"
 
 	"github.com/PuerkitoBio/goquery"
+	"github.com/briandowns/spinner"
 )
 
 type VideoUrl struct {
@@ -25,6 +26,9 @@ type D000D struct {
 }
 
 func (d D000D) GetVideoUrl() (VideoUrl, error) {
+	spinner := spinner.New(spinner.CharSets[11], 100*time.Millisecond)
+	spinner.Start()
+	defer spinner.Stop()
 	link, err := d.step1()
 	if err != nil {
 		return VideoUrl{}, err
@@ -33,7 +37,6 @@ func (d D000D) GetVideoUrl() (VideoUrl, error) {
 	if err != nil {
 		return VideoUrl{}, err
 	}
-	fmt.Println(video_link)
 	return VideoUrl{Url: video_link, Reffer: strings.Split(d.BaseUrl, "/")[2]}, nil
 }
 
