@@ -10,9 +10,35 @@ You only need to have `vlc` installed on your system.
 
 Adapt the following commands to your system.
 
+### Mac arm
+
 ```bash
 wget https://github.com/StevenSermeus/anime-tui/releases/download/0.0.1-beta/anime-tui_Darwin_arm64.tar.gz
 tar -xvf anime-tui_Darwin_arm64.tar
+mv anime-tui /usr/local/bin
+```
+
+### Mac amd64
+
+```bash
+wget  https://github.com/StevenSermeus/anime-tui/releases/download/0.0.1-beta/anime-tui_Darwin_x86_64.tar.gz
+tar -xvf anime-tui_Darwin_x86_64.tar
+mv anime-tui /usr/local/bin
+```
+
+### Linux arm
+
+```bash
+wget https://github.com/StevenSermeus/anime-tui/releases/download/0.0.1-beta/anime-tui_Linux_arm64.tar.gz
+tar -xvf anime-tui_Linux_arm64.tar
+mv anime-tui /usr/local/bin
+```
+
+### Linux amd64
+
+```bash
+wget https://github.com/StevenSermeus/anime-tui/releases/download/0.0.1-beta/anime-tui_Linux_x86_64.tar.gz
+tar -xvf anime-tui_Linux_x86_64.tar
 mv anime-tui /usr/local/bin
 ```
 
