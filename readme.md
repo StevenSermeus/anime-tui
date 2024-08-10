@@ -2,6 +2,8 @@
 
 It's a simple terminal application that allows you to browse and watch anime in VOSTFR from your terminal.
 
+![demo](.github/assets/demo.gif)
+
 ## Requirements
 
 You only need to have `vlc` installed on your system.
@@ -40,6 +42,14 @@ mv anime-tui /usr/local/bin
 wget https://github.com/StevenSermeus/anime-tui/releases/download/0.0.1-beta/anime-tui_Linux_x86_64.tar.gz
 tar -xvf anime-tui_Linux_x86_64.tar
 mv anime-tui /usr/local/bin
+```
+
+### From source
+
+Requires go 1.22.5 installed on your system.
+
+```bash
+make install
 ```
 
 ## Usage
