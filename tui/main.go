@@ -57,4 +57,5 @@ func StartTui() {
 		}
 
 	}
+	os.Exit(0)
 }

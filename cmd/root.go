@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/StevenSermeus/anime-tui/tui"
 	"github.com/spf13/cobra"
 )
 
@@ -11,7 +12,7 @@ var rootCmd = &cobra.Command{
 	Use:   "anime-tui",
 	Short: "A terminal user interface for anime",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("This is the root command")
+		tui.StartTui()
 	},
 }
 
