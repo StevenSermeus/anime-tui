@@ -22,7 +22,7 @@ var versionCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		// Only change when the tag is changed
 		// When in othen branch than main put as -dev
-		fmt.Println("0.0.1-beta")
+		fmt.Println("0.0.2-beta")
 	},
 }
 
