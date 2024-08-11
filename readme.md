@@ -89,7 +89,6 @@ custom_error -> CustomError is the package to handle custom errors.
 
 ## Roadmap
 
-- [ ] Add autoupdate
 - [ ] Add download feature
 
 ## License
