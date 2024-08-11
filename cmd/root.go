@@ -20,9 +20,7 @@ var versionCmd = &cobra.Command{
 	Use:   "version",
 	Short: "Print the version number of anime-tui",
 	Run: func(cmd *cobra.Command, args []string) {
-		// Only change when the tag is changed
-		// When in othen branch than main put as -dev
-		fmt.Println("0.0.2-beta")
+
 	},
 }
 
