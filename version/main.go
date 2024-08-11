@@ -9,7 +9,7 @@ import (
 )
 
 func Version() string {
-	return "0.0.2-beta"
+	return "1.0.0"
 }
 
 type LatestVersion struct {
